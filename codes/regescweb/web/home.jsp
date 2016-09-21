@@ -12,6 +12,8 @@
         <title>Nossa Home</title>
     </head>
     <body>
-        <h1>Nossa Home!</h1>
+        <h1>Nossa Home de Verdade!</h1>
+        
+        <a href="students">Gerenciamento de Alunos</a>
     </body>
 </html>

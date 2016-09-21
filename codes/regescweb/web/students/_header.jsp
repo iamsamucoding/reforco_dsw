@@ -4,9 +4,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nossa Primeira Página JSP</title>
+        <title>Geremenciamento de Estudantes</title>
     </head>
     <body>
-        <h1>Nossa Primeira Página JSP</h1>
-    </body>
-</html>
