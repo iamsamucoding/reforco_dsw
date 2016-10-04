@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 public class StudentDAO {
@@ -43,7 +44,30 @@ public class StudentDAO {
     }
     
     
-    
+    public ArrayList<Student> findAll() throws SQLException {
+        ArrayList<Student> list = new ArrayList<>();
+        
+        String sql = "SELECT * FROM Student";
+        
+        PreparedStatement stmt = this.conn.prepareCall(sql);
+        
+        ResultSet rs = stmt.executeQuery();
+        
+        while (rs.next()) {
+            long id = rs.getLong(1);
+            String name = rs.getString(2);
+            int age = rs.getInt(3);
+            
+            Student student = new Student(name, age);
+            student.setId(id);
+            
+            list.add(student);
+        }
+        
+        stmt.close();
+        
+        return list;
+    }
     
     
 }
