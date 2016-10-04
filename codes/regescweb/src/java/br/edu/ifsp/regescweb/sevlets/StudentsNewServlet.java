@@ -31,6 +31,7 @@ public class StudentsNewServlet extends HttpServlet {
             int age = Integer.parseInt(req.getParameter("age"));
             
             Student student = new Student(name, age);
+            
             StudentDAO dao = new StudentDAO();
             dao.insert(student);
             

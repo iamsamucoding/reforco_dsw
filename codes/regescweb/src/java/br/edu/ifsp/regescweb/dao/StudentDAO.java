@@ -5,7 +5,9 @@ import br.edu.ifsp.regescweb.db.ConnectionFactory;
 import br.edu.ifsp.regescweb.models.Student;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class StudentDAO {
@@ -25,16 +27,24 @@ public class StudentDAO {
     
     
     public void insert(Student student) throws SQLException {
-        String sql = "ashjakshak INSERT INTO Student(name, age) VALUES (?, ?)";
+        String sql = "INSERT INTO Student(name, age) VALUES (?, ?)";
         
-        PreparedStatement stmt = this.conn.prepareStatement(sql);
+        PreparedStatement stmt = this.conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         stmt.setString(1, student.getName());
         stmt.setInt(2, student.getAge());
         
         stmt.executeUpdate();
         
+        ResultSet rs = stmt.getGeneratedKeys();
+        rs.next();
+        student.setId(rs.getLong(1));
+        
         stmt.close();
     }
+    
+    
+    
+    
     
 }
 

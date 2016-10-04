@@ -8,6 +8,7 @@
     Student student = (Student) request.getAttribute("student");
 %>
 
+Id: <%= student.getId() %> <br/>
 Nome: <%= student.getName() %> <br/>
 Idade: <%= student.getAge() %>
 
