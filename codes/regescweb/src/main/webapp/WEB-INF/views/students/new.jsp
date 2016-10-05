@@ -2,7 +2,7 @@
 
 <h1>Cadastrar Estudante!</h1>
 
-<form action="/regescweb/students/new" method="post">
+<form action="/regescweb/students/create" method="post">
     <div>
         <label>Nome: </label>
         <input type="text" name="name" />

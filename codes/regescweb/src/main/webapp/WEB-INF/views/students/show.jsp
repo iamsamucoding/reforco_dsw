@@ -8,4 +8,8 @@ Id: ${student.id} <br/>
 Nome: ${student.name} <br/>
 Idade: ${student.age}
 
+<br/><br/>
+
+<a href="/regescweb/students">Gerenciamento de Alunos</a>
+
 <jsp:include page="_footer.jsp" />

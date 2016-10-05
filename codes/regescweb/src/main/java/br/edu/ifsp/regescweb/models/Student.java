@@ -1,6 +1,8 @@
 
 package br.edu.ifsp.regescweb.models;
 
+// Uma classe é um JavaBean se ela possui um construtor sem parâmetros e para cada
+// um de seus atributos, ela possua setters and getters
 
 public class Student {
     private long id;

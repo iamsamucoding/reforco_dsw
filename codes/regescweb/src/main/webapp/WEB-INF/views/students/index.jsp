@@ -22,6 +22,6 @@
 </table>
 
 <br/><br/>
-<a href="students/new.jsp">Cadastrar</a>
+<a href="students/new">Cadastrar</a>
         
 <jsp:include page="_footer.jsp" />
